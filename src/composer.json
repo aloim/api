@@ -1,0 +1,17 @@
+{
+    "require": {
+        "atticlab/stellar-php-sdk": "dev-master",
+        "phalcon/incubator": "^2.0",
+        "basho/riak": "3.3.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "ramsey/uuid": "^3.5",
+        "phpmailer/phpmailer": "^5.2",
+        "monolog/monolog": "^1.21"
+    },
+    "repositories":[
+        {
+            "type": "git",
+            "url":  "https://github.com/openbankit/stellar-php.git"
+        }
+    ]
+}
