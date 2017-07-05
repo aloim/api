@@ -71,6 +71,8 @@ $di->setShared('mailer', function () use ($config) {
 
     if (!empty($config->project->admin_email) && !empty($config->project->admin_name)) {
         $mailer->setFrom($config->project->admin_email, $config->project->admin_name);
+    } else {
+        $mailer->setFrom($config->smtp->username, getenv("PROJECT_NAME"));
     }
 
     return $mailer;
