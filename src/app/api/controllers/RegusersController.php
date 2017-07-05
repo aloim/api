@@ -56,7 +56,7 @@ class RegusersController extends ControllerBase
                 try {
                     if ($enrollment->create()) {
                         // Send email to registered user
-                        $sent = $this->mailer->send($reguser->email_s, 'Welcome to smartmoney',
+                        $sent = $this->mailer->send($reguser->email_s, 'Welcome to ' . getenv("PROJECT_NAME"),
                             ['user_enrollment_created', ['password' => $enrollment->otp_s]]);
                         if (!$sent) {
                             $this->logger->emergency('Cannot send email with welcome code to registered user (' . $reguser->email_s . ')');
