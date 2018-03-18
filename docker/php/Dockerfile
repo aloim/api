@@ -1,6 +1,6 @@
 FROM php:7.0-fpm
 
-ENV PHPREDIS_VERSION php7
+ENV PHPREDIS_VERSION 3.1.2
 
 RUN apt-get update && apt-get install -y \
     git cron libpq-dev postgresql-client libxml2-dev memcached libmemcached-dev \
